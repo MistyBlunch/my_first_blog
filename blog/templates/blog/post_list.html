@@ -14,15 +14,31 @@
         Lo que me motiva a seguir en este mundo de la tecnología es aplicarla en un futuro; mejorar, crear u optimizar ya sea sistemas, <br />
         páginas, protipos, simulaciones, etc. Y sobre todo enseñar a otras personas sobre lo maravilloso que puede ser todo esto...<br />
       </p>
+
     </div>
+
+
     <div>
+      <h1>Mi Blog</h1>
+
+      {% for post in posts%}
+        <div>
+          </br>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
+          <p>published: {{ post.published_date }}</p>
+        </div>
+      {% endfor %}
+
+    </div>
+    <!-- <div>
       <h3>Portafolio:</h3>
       <p>IMAGENES</p>
     </div>
     <div>
       <h3>Contáctame:</h3>
       <p>logos y links</p>
-    </div>
+    </div> -->
 
   </body>
 

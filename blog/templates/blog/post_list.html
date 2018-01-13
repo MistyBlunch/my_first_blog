@@ -1,45 +1,14 @@
-<html>
-  <head>
-      <title>MistyBlunch's Page</title>
-  </head>
+{% extends 'blog/base.html' %}
 
-  <body>
-    <div>
-      <h1>Grace Nikole</h1>
-      <p>Me encanta aprender sobre nuevas tecnologías y ponerlas en práctica, suelo ir a muchos eventos relacionados a la tecnología <br />
-        para que al llegar a mi casa me ponga a averiguar todo lo que escuché en su momento y no entendí. Me fascina quedarme horas y <br />
-        horas en frente de mi computadora, podría estar allí todo el día si de ver código o de aprender se trata. Actualmente me encuentro <br />
-        estudiando para mejorar más mis habilidades al igual que mis hábitos y sobre todo para seguir superándome día a día.<br />
-        He programado en lenguajes como: C++, Python, Visual Basic y Java Script <br />
-        Lo que me motiva a seguir en este mundo de la tecnología es aplicarla en un futuro; mejorar, crear u optimizar ya sea sistemas, <br />
-        páginas, protipos, simulaciones, etc. Y sobre todo enseñar a otras personas sobre lo maravilloso que puede ser todo esto...<br />
-      </p>
-
-    </div>
-
-
-    <div>
-      <h1>Mi Blog</h1>
-
+{% block content %}
       {% for post in posts%}
-        <div>
-          </br>
-          <h2><a href="">{{ post.title }}</a></h2>
+        <div class="post">
+        </br>
+          <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
           <p>{{ post.text|linebreaksbr }}</p>
-          <p>published: {{ post.published_date }}</p>
+          <div class="date">
+            {{ post.published_date }}
+          </div>
         </div>
       {% endfor %}
-
-    </div>
-    <!-- <div>
-      <h3>Portafolio:</h3>
-      <p>IMAGENES</p>
-    </div>
-    <div>
-      <h3>Contáctame:</h3>
-      <p>logos y links</p>
-    </div> -->
-
-  </body>
-
-</html>
+{% endblock %}

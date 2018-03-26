@@ -1,3 +1,3 @@
 Hola, este es mi blog personal.
-Aquí estaré subiendo algunos posts con respecto a lo que hago 
-y algunas recomendaciones con respecto a la todo lo realcionado a la proramación y a la tecnología.
+Es una prueba en dÃ³nde utilicÃ© Python como lenguaje de programaciÃ³n y Django como el framework.
+Para poder desarrollar este blog seguÃ­ el siguiente tutorial de Django Girls: https://tutorial.djangogirls.org/en/
